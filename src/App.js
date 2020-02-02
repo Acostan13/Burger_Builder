@@ -22,7 +22,7 @@ const Auth = React.lazy(() => {
 const App = (props) => {
   useEffect(() => {
     props.onTryAutoSignUp();
-  });
+  }, [props]);
 
   let routes = (
     <Switch>
