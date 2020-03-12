@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import Aux from '../../../hoc/Auxiliary/Auxiliary'
 import Button from '../../UI/Button/Button'
 class orderSummary extends Component {
-    componentWillUpdate() {
-        console.log('[OrderSummary] WillUpdate')
-    }
     render() {
         const ingredientSummary = Object.keys(this.props.ingredients)
             .map(igKey => {
@@ -26,8 +23,8 @@ class orderSummary extends Component {
                 <Button clicked={this.props.purchaseCancelled} btnType="Danger">CANCEL</Button>
                 <Button clicked={this.props.purchasedContinued} btnType="Success">CONTINUE</Button>
             </Aux>
-        );
+        )
     }
-};
+}
 
 export default orderSummary;
