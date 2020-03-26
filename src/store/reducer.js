@@ -5,7 +5,7 @@ const initialState = {
         salad: 0,
         bacon: 0,
         cheese: 0,
-        beef: 0
+        meat: 0
     },
     totalPrice: 4
 }
