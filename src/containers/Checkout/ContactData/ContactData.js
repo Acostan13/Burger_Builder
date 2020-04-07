@@ -26,7 +26,7 @@ class ContactData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Street'
+                    placeholder: 'Street Address'
                 },
                 value: '',
                 validation: {
@@ -67,7 +67,7 @@ class ContactData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Email'
+                    placeholder: 'Email Address'
                 },
                 value: '',
                 validation: {
@@ -112,7 +112,7 @@ class ContactData extends Component {
 
     orderHandler = (event) => {
         event.preventDefault();
-        this.setState({ loading: true });
+        this.setState({ loading: true })
         const formData = {}
         for(let formElementIdentifier in this.state.orderForm){
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value
@@ -124,11 +124,11 @@ class ContactData extends Component {
         }
         axios.post('/orders.json', order)
             .then(response => {
-                this.setState({ loading: false });
-                this.props.history.push('/');
+                this.setState({ loading: false })
+                this.props.history.push('/')
             })
             .catch(error => {
-                this.setState({ loading: false });
+                this.setState({ loading: false })
             });
     }
 
@@ -169,17 +169,18 @@ class ContactData extends Component {
                     invalid={!formElement.config.valid}
                     shouldValidate={formElement.config.validation}
                     touched={formElement.config.touched}
+                    valueType={formElement.config.elementConfig.placeholder}
                     changed={(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
                 <Button btnType="Success">ORDER</Button>
             </form>
         );
         if (this.state.loading) {
-            form = <Spinner />;
+            form = <Spinner />
         }
         return (
             <div className={classes.ContactData}>
-                <h4>Enter your Contact Data</h4>
+                <h4>Enter your Contact Information</h4>
                 {form}
             </div>
         );
