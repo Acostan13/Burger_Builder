@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import Aux from '../../../hoc/Auxiliary/Auxiliary'
 import Button from '../../UI/Button/Button'
 class orderSummary extends Component {
-    componentDidUpdate() {
-        console.log('[OrderSummary] Did Update')
+    componentWillUpdate() {
+        console.log('[OrderSummary] WillUpdate')
     }
     render() {
         const ingredientSummary = Object.keys(this.props.ingredients)
@@ -23,7 +23,7 @@ class orderSummary extends Component {
                 </ul>
                 <p><strong>Total Price: {this.props.price.toFixed(2)}</strong></p>
                 <p>Continue to Checkout?</p>
-                <Button clicked={this.props.purchaseCanceled} btnType="Danger">CANCEL</Button>
+                <Button clicked={this.props.purchaseCancelled} btnType="Danger">CANCEL</Button>
                 <Button clicked={this.props.purchasedContinued} btnType="Success">CONTINUE</Button>
             </Aux>
         );
