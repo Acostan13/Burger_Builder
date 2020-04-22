@@ -2,12 +2,13 @@ import React from 'react';
 import classes from './Toolbar.module.css'
 import Logo from '../../Logo/Logo'
 import NavigationItems from '../NavigationItems/NavigationItems'
+import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle'
 
-const toobar = (props) => {
+const toolbar = (props) => {
     return (
         <div>
             <header className={classes.Toolbar}>
-                <div>MENU</div>
+                <DrawerToggle clicked={props.drawerToggleClicked} />
                 <div className={classes.Logo}>
                     <Logo />
                 </div>
@@ -19,4 +20,4 @@ const toobar = (props) => {
     );
 };
 
-export default toobar;
+export default toolbar;
