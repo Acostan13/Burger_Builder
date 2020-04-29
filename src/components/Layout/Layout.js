@@ -7,6 +7,7 @@ const layout = (props) => (
         <main className={classes.Content}>
             {props.children}
         </main>
+        <div>Build Controls</div>
     </Aux>
 )
 
