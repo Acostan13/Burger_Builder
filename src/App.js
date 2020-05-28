@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {Route, Switch} from 'react-router-dom'
 
 import Layout from './hoc/Layout/Layout'
@@ -27,4 +27,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

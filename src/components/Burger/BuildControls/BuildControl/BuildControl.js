@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import classes from './BuildControl.module.css'
 
 const buildControl = (props) => {
@@ -14,7 +14,7 @@ const buildControl = (props) => {
                 className={classes.More}
                 onClick={props.added}>More</button>
         </div>
-    );
-};
+    )
+}
 
 export default buildControl

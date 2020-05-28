@@ -8,7 +8,7 @@ const drawerToggle = (props) => {
             <div></div>
             <div></div>
         </div>
-    );
-};
+    )
+}
 
-export default drawerToggle;
+export default drawerToggle

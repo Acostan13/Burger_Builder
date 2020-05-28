@@ -29,7 +29,7 @@ const order = (props) => {
             <p>Ingredients: {ingredientOutput}</p>
             <p>Price: <strong>USD {Number.parseFloat(props.price).toFixed(2)}</strong></p>
         </div>
-    );
-};
+    )
+}
 
-export default order;
+export default order

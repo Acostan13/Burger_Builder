@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import classes from './Burger.module.css'
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
 
@@ -23,7 +23,7 @@ const burger = (props) => {
             {transformedIngredients}
             <BurgerIngredient type="bread-bottom" />
         </div>
-    );
-};
+    )
+}
 
-export default burger;
+export default burger

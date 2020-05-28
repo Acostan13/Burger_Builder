@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import Burger from '../../Burger/Burger'
 import Button from '../../UI/Button/Button'
@@ -20,7 +20,7 @@ const checkoutSummary = (props) => {
                 clicked={props.checkoutContinued}>
                 CONTINUE</Button>
         </div>
-    );
-};
+    )
+}
 
-export default checkoutSummary;
+export default checkoutSummary
