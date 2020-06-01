@@ -7,7 +7,7 @@ import NavigationItems from './NavigationItems'
 import NavigationItem from './NavigationItem/NavigationItem'
 
 
-configure({adapter: new Adapter()})
+configure({ adapter: new Adapter() })
 
 // The describe function takes two arguements:
 // First: Description of the test bundle this file holds
@@ -24,7 +24,11 @@ describe('<NavigationItems />', () => {
     })
     it('should render three <NavigationItem /> elements if authenticated', () => {
         // wrapper = shallow(<NavigationItems isAuthenticated />)
-        wrapper.setProps({isAuthenticated: true})
+        wrapper.setProps({ isAuthenticated: true })
         expect(wrapper.find(NavigationItem)).toHaveLength(3)
+    })
+    it('should render an exact logout button', () => {
+        wrapper.setProps({ isAuthenticated: true })
+        expect(wrapper.contains(<NavigationItem link='/logout'>Logout</NavigationItem>)).toEqual(true)
     })
 })
