@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
-import Aux from "../Auxiliary/Auxiliary";
-import classes from "./Layout.module.css";
-import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
-import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
+import Aux from '../Auxiliary/Auxiliary';
+import classes from './Layout.module.css';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
-const Layout = (props) => {
+const Layout = props => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
 
   const sideDrawerClosedHandler = () => {
@@ -28,15 +28,14 @@ const Layout = (props) => {
         open={sideDrawerIsVisible}
         closed={sideDrawerClosedHandler}
       />
-
       <main className={classes.Content}>{props.children}</main>
     </Aux>
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    isAuthenticated: state.auth.token !== null,
+    isAuthenticated: state.auth.token !== null
   };
 };
 

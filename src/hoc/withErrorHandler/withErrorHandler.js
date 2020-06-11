@@ -26,7 +26,7 @@ const withErrorHandler = (WrappedComponent, axios) => {
     }, [reqInterceptor, resInterceptor]);
 
     const errorConfirmedHandler = () => {
-      setError(null)
+      setError(null);
     };
 
     return (
