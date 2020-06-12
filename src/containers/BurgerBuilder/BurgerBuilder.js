@@ -21,27 +21,11 @@ const BurgerBuilder = (props) => {
 
   // modern approach to declaring state with hooks
   const [purchasing, setPurchasing] = useState(false);
-  const {
-    onIngredientAdded,
-    onIngredientRemoved,
-    onInitIngredients,
-    onInitPurchase,
-    onSetAuthRedirectPath,
-    path,
-    ingName,
-  } = props;
+  const { onInitIngredients } = props;
 
   useEffect(() => {
     onInitIngredients();
-  }, [
-    onIngredientAdded,
-    onIngredientRemoved,
-    onInitIngredients,
-    onInitPurchase,
-    onSetAuthRedirectPath,
-    path,
-    ingName,
-  ]);
+  }, [ onInitIngredients ]);
 
   const updatePurchaseState = (ingredients) => {
     const sum = Object.keys(ingredients)
